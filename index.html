@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Smile 2 Daily Progress Tracker - Block Piprali</title>
+    <title>School Opening after Covid Presence Tracker - Block Piprali</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta http-equiv="content-language" content="en">
@@ -38,7 +38,7 @@ width:100%;
 Survey.StylesManager.applyTheme("modern");
 
 var surveyJSON = {
-  "title": "Smile 2 Daily Progress Tracker",
+  "title": "School Opening after Covid Presence Tracker",
   "description": "(Block Piprali)",
   "logo": "https://i.pinimg.com/originals/33/63/ed/3363ed08a390ecec6e6f3ec775a2fd2a.jpg",
   "logoWidth": 150,
@@ -1274,14 +1274,14 @@ var surveyJSON = {
               "cellType": "dropdown",
               "isRequired": true,
               "choices": [
-                "Class 1",
-                "Class 2",
-                "Class 3",
-                "Class 4",
-                "Class 5",
-                "Class 6",
-                "Class 7",
-                "Class 8",
+//                 "Class 1",
+//                 "Class 2",
+//                 "Class 3",
+//                 "Class 4",
+//                 "Class 5",
+//                 "Class 6",
+//                 "Class 7",
+//                 "Class 8",
                 "Class 9",
                 "Class 10",
                 "Class 11",
@@ -1289,80 +1289,80 @@ var surveyJSON = {
               ]
             },
             {
-       "name": "Subject",
-       "cellType": "dropdown",
-       "isRequired": true,
-       "choices": [
-        "Hindi",
-        "English",
-        "Maths",
-        "EVS",
-        "Science",
-        "Social Science",
-        "Sanskrit",
-        "Urdu",
-        "Agriculture Science",
-        "Biology",
-        "Business Studies",
-        "Chemistry",
-        "Computer Science",
-        "Drawing",
-        "Economics",
-        "English Compulsory",
-        "English Literature",
-        "Farsi Literature",
-        "Financial Accountancy",
-        "Geography",
-        "Geology",
-        "Gujarati Literature",
-        "Hindi Compulsory",
-        "Hindi Literature",
-        "History",
-        "Home Science",
-        "Information Practices",
-        "Maths Optional",
-        "Physics",
-        "Political Science",
-        "Psychology",
-        "Public Administration",
-        "Punjabi",
-        "Sindhi Literature",
-        "Sociology",
-        "Urdu Literature"
-       ]
-      },
+//        "name": "Subject",
+//        "cellType": "dropdown",
+//        "isRequired": true,
+//        "choices": [
+//         "Hindi",
+//         "English",
+//         "Maths",
+//         "EVS",
+//         "Science",
+//         "Social Science",
+//         "Sanskrit",
+//         "Urdu",
+//         "Agriculture Science",
+//         "Biology",
+//         "Business Studies",
+//         "Chemistry",
+//         "Computer Science",
+//         "Drawing",
+//         "Economics",
+//         "English Compulsory",
+//         "English Literature",
+//         "Farsi Literature",
+//         "Financial Accountancy",
+//         "Geography",
+//         "Geology",
+//         "Gujarati Literature",
+//         "Hindi Compulsory",
+//         "Hindi Literature",
+//         "History",
+//         "Home Science",
+//         "Information Practices",
+//         "Maths Optional",
+//         "Physics",
+//         "Political Science",
+//         "Psychology",
+//         "Public Administration",
+//         "Punjabi",
+//         "Sindhi Literature",
+//         "Sociology",
+//         "Urdu Literature"
+//        ]
+//       },
             {
               "name": "Total Enrolment",
               "cellType": "text",
               "isRequired": true,
               "inputType": "number"
             },
+//             {
+//               "name": "HW Given (Online)",
+//               "cellType": "text",
+//               "isRequired": true,
+//               "inputType": "number"
+//             },
+//             {
+//               "name": "HW Given (Offline)",
+//               "cellType": "text",
+//               "isRequired": true,
+//               "inputType": "number"
+//             },
+//             {
+//               "name": "HW Collected (Online)",
+//               "cellType": "text",
+//               "isRequired": true,
+//               "inputType": "number"
+//             },
+//             {
+//               "name": "HW Collected (Offline)",
+//               "cellType": "text",
+//               "isRequired": true,
+//               "inputType": "number"
+//             },
             {
-              "name": "HW Given (Online)",
-              "cellType": "text",
-              "isRequired": true,
-              "inputType": "number"
-            },
-            {
-              "name": "HW Given (Offline)",
-              "cellType": "text",
-              "isRequired": true,
-              "inputType": "number"
-            },
-            {
-              "name": "HW Collected (Online)",
-              "cellType": "text",
-              "isRequired": true,
-              "inputType": "number"
-            },
-            {
-              "name": "HW Collected (Offline)",
-              "cellType": "text",
-              "isRequired": true,
-              "inputType": "number"
-            },
-            {
-              "name": "HW Portfolio Prepared",
+              "name": "Total Present",
               "cellType": "text",
               "isRequired": true,
               "inputType": "number"
@@ -1391,19 +1391,19 @@ function sendDataToServer(survey) {
 					
 					for (i = 0; i < data.question2.length; i++) {
 					var q = data.question2[i];
-                    $.post( "https://docs.google.com/forms/u/0/d/e/1FAIpQLSdR7aTfCEfNefriSXpmKD6ccLT6QEVbGXtnGVoAWiig7w6MSA/formResponse",
+                    $.post( "https://docs.google.com/forms/u/2/d/e/1FAIpQLSd2aYiomLzgwLR1x9PXncLDU2qslPiGSDDIX1fp7NrBDOqXQA/formResponse",
                     {
-                    "entry.2081806952": data.date,
-					"entry.1997249446": data.peeoName,
-					"entry.1341436243": data.schoolName,
-					"entry.1365237637": q["Class"],
-					"entry.993949122": q["Subject"],
-					"entry.791177180": q["Total Enrolment"],
-					"entry.510921074": q["HW Given (Online)"],
-					"entry.2111580312": q["HW Given (Offline)"],
-					"entry.1681330709": q["HW Collected (Online)"],
-					"entry.79184850": q["HW Collected (Offline)"],
-					"entry.51442607": q["HW Portfolio Prepared"]
+                    "entry.268875749": data.date,
+					"entry.1793765460": data.peeoName,
+					"entry.2070308753": data.schoolName,
+					"entry.1884067501": q["Class"],
+// 					"entry.993949122": q["Subject"],
+					"entry.1305570573": q["Total Enrolment"],
+// 					"entry.510921074": q["HW Given (Online)"],
+// 					"entry.2111580312": q["HW Given (Offline)"],
+// 					"entry.1681330709": q["HW Collected (Online)"],
+// 					"entry.79184850": q["HW Collected (Offline)"],
+					"entry.303816468": q["Total Present"]
                     }
                     );
 					}
